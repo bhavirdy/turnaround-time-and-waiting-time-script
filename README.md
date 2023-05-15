@@ -2,6 +2,10 @@
 
 The following Python script utilizes data from a .txt file, exported from an operating system simulator, to calculate the average turnaround time and average waiting time for a set of processes.
 
+Waiting time defined as: the total time spent in the READY  state (not WAITING)
+
+Turnaround time defined as: the time at the TERMINATED state - time it first arrive in READY state
+
 Sample data provided in the .txt files:
 
 PID, STATE, MODE, START TIME, END TIME, PROGRAM
