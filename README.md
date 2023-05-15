@@ -5,7 +5,7 @@ The following Python script utilizes data from a .txt file, exported from an ope
 Waiting time defined as: the total time spent in the READY  state (not WAITING)
 
 Turnaround time defined as: the time at the TERMINATED state - time it first arrive in READY state
-----------------------------------------------------------------------------------------------------------------------------
+_______________________________________________________________________________________________________________________________
 Sample data provided in the .txt files:
 
 PID, STATE, MODE, START TIME, END TIME, PROGRAM
