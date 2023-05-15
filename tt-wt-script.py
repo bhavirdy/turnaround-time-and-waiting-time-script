@@ -1,6 +1,6 @@
 import statistics
 
-with open('test.txt', 'r') as file:
+with open('FCFS_5_20.txt', 'r') as file:
     # skip header line
     next(file)
     file_contents = file.readlines()
