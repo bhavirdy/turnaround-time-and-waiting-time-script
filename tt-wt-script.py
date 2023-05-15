@@ -8,7 +8,7 @@ def get_average_turnaround_time(file_contents):
     terminated_times = []
 
     for line in file_contents:
-        pid, state, mode, start_time, end_time, program = line.strip().split(', ')
+        pid, state, _, start_time, _, _ = line.strip().split(', ')
 
         pid = int(pid)
         start_time = int(start_time)
