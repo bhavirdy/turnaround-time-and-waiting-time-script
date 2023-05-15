@@ -1,6 +1,6 @@
 # turnaround-time-and-waiting-time-script
 
-The following Python script utilizes data from multiple .txt files, exported from an operating system simulator, to calculate the average turnaround time and average waiting time for a set of processes.
+The following Python script utilizes data from a .txt file, exported from an operating system simulator, to calculate the average turnaround time and average waiting time for a set of processes.
 
 Sample data provided in the .txt files:
 
