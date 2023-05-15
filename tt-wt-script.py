@@ -1,6 +1,6 @@
 import statistics
 
-with open('FCFS_5_20.txt', 'r') as file:
+with open('FCFS_10_40.txt', 'r') as file:
     # skip header line
     next(file)
     file_contents = file.readlines()
@@ -28,11 +28,8 @@ turnaround_times = []
 for index, time in enumerate(actual_start_times):
     turnaround_times.append(terminated_times[index] - time)
 
-# print(actual_start_times)
-# print(terminated_times)
-
 print(turnaround_times)   
 
 average_turnaround_time = statistics.mean(turnaround_times)
 
-print(average_turnaround_time)
+print(round(average_turnaround_time, 2))
