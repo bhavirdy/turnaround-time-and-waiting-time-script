@@ -1,3 +1,5 @@
+import statistics
+
 with open('test.txt', 'r') as file:
     # skip header line
     next(file)
@@ -26,6 +28,11 @@ turnaround_times = []
 for index, time in enumerate(actual_start_times):
     turnaround_times.append(terminated_times[index] - time)
 
-print(actual_start_times)
-print(terminated_times)
+# print(actual_start_times)
+# print(terminated_times)
+
 print(turnaround_times)   
+
+average_turnaround_time = statistics.mean(turnaround_times)
+
+print(average_turnaround_time)
