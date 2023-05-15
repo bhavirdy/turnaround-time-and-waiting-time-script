@@ -6,6 +6,7 @@ Waiting time defined as: the total time spent in the READY  state (not WAITING)
 
 Turnaround time defined as: the time at the TERMINATED state - time it first arrive in READY state
 
+
 Sample data provided in the .txt files:
 
 PID, STATE, MODE, START TIME, END TIME, PROGRAM
