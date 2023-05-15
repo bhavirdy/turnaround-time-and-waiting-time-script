@@ -16,10 +16,9 @@ def get_average_turnaround_time(file_contents):
         if pid != current_pid:
             current_pid = pid
             actual_start_times.append(start_time)
+            
         elif state == 'TERMINATED':
             terminated_times.append(start_time)
-        else:
-            continue
 
     turnaround_times = []
     for index, time in enumerate(actual_start_times):
