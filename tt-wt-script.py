@@ -16,7 +16,7 @@ def get_average_turnaround_time(file_contents):
         if pid != current_pid:
             current_pid = pid
             actual_start_times.append(start_time)
-            
+
         elif state == 'TERMINATED':
             terminated_times.append(start_time)
 
@@ -30,7 +30,20 @@ def get_average_turnaround_time(file_contents):
 
 def get_average_waiting_time(file_contents):
 
-    average_waiting_time = -1
+    waiting_times = []
+    sum_current_waiting_time = 0
+
+    for line in file_contents:
+        _, state, _, start_time, end_time, _ = line.strip().split(', ')
+
+        if state == 'TERMINATED':
+            waiting_times.append(sum_current_waiting_time)
+            sum_current_waiting_time = 0
+
+        elif state == "READY":
+            sum_current_waiting_time += (int(end_time) - int(start_time))
+
+    average_waiting_time = round(statistics.mean(waiting_times), 2)
 
     return average_waiting_time
 
