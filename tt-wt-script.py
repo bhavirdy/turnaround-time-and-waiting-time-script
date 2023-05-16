@@ -48,9 +48,9 @@ def get_average_waiting_time(file_contents):
     return average_waiting_time
 
 
-file_name = 'FCFS_5_20.txt'
+file_path = 'test.txt'
 
-with open(file_name, 'r') as file:
+with open(file_path, 'r') as file:
     # skip header line
     next(file)
     file_contents = file.readlines()
@@ -58,5 +58,5 @@ with open(file_name, 'r') as file:
 average_turnaround_time = get_average_turnaround_time(file_contents)
 average_waiting_time = get_average_waiting_time(file_contents)
 
-print("Average turnaround time for", file_name, "is:", average_turnaround_time)
-print("Average waiting time for", file_name, " is:", average_waiting_time)
+print("Average turnaround time for", file_path, "is:", average_turnaround_time)
+print("Average waiting time for", file_path, " is:", average_waiting_time)
